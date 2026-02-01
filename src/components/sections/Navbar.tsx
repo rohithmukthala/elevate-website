@@ -118,7 +118,13 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-16 z-40 bg-white lg:hidden"
+            className="fixed inset-0 top-16 z-40 lg:hidden"
+            style={{
+              backgroundColor: 'rgba(0, 0, 0, 0.85)',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
+              borderTop: '1px solid rgba(255, 255, 255, 0.1)',
+            }}
           >
             <Container className="flex h-full flex-col py-8">
               <nav className="flex flex-col gap-2">
@@ -130,7 +136,18 @@ export default function Navbar() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.05 }}
-                    className="py-3 text-2xl font-medium text-neutral-900 transition-colors hover:text-neutral-600"
+                    style={{ 
+                      color: '#ffffff',
+                      backgroundColor: '#000000',
+                      padding: '12px 20px',
+                      borderRadius: '12px',
+                      border: '1px solid rgba(255, 255, 255, 0.3)',
+                      marginBottom: '8px',
+                      display: 'block',
+                      fontSize: '20px',
+                      fontWeight: '500',
+                      textDecoration: 'none'
+                    }}
                   >
                     {link.label}
                   </motion.a>
@@ -148,7 +165,18 @@ export default function Navbar() {
                     closeMenu();
                     openBookingModal();
                   }}
-                  className="inline-flex w-full justify-center rounded-full bg-neutral-900 px-6 py-4 text-base font-medium text-white transition-colors hover:bg-neutral-800"
+                  style={{ 
+                    width: '100%',
+                    borderRadius: '9999px',
+                    padding: '16px 24px',
+                    fontSize: '16px',
+                    fontWeight: '600',
+                    textAlign: 'center',
+                    backgroundColor: '#000000', 
+                    color: '#ffffff',
+                    border: '2px solid #ffffff',
+                    cursor: 'pointer',
+                  }}
                 >
                   Book a Call
                 </button>
