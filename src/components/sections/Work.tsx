@@ -9,7 +9,8 @@ const projects = [
   {
     id: 1,
     title: 'FitZone Gym',
-    description: 'A modern fitness website with class booking and membership signups that helped increase gym memberships by 40%.',
+    problemSolved: 'Gym websites often bury their signup process.',
+    description: 'This system puts membership enquiries front-and-center with sticky CTAs, class schedule integration, and automated tour booking.',
     images: [
       'https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F51753%2Ffitnix-xF0mBI3qTywNsUW01J4g0TdCTACfXf&w=3840&q=100',
       'https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F51753%2Ffitnix-D1gZGwygpSFWBMjosmmGdGYn5S62GF&w=3840&q=100',
@@ -20,7 +21,8 @@ const projects = [
   {
     id: 2,
     title: 'Refit Studio',
-    description: 'A sleek fitness studio website with seamless booking flow that boosted online class registrations by 65%.',
+    problemSolved: 'Fitness studios lose leads when booking is confusing.',
+    description: 'This system uses a 2-click class booking flow, waitlist capture, and instant confirmation emails.',
     images: [
       'https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F50281%2Frefit-KHrqxTg7MUBBlJKeWxfwRIH2EA4T49&w=3840&q=100',
       'https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F50281%2Frefit-jFrdMXOtfjaCZ8qUDCq7cosP3mAG76&w=3840&q=100',
@@ -31,7 +33,8 @@ const projects = [
   {
     id: 3,
     title: 'Landeros Real Estate',
-    description: 'A premium real estate website with property listings and virtual tours that increased lead generation by 80%.',
+    problemSolved: 'Property seekers browse but never enquire.',
+    description: 'This system adds property-specific lead capture, automated property alerts, and agent callback requests on every listing.',
     images: [
       'https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F49159%2Flanderos-ODNSG15vAr3RCcYWLd4M0BtDBRPjRo&w=3840&q=100',
       'https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F49159%2Flanderos-AuXP0tlMwG3YH6LGJzUErdPVbwDjCK&w=3840&q=100',
@@ -42,7 +45,8 @@ const projects = [
   {
     id: 4,
     title: 'Funnelz Marketing',
-    description: 'A high-converting marketing funnel website designed to maximize lead capture and drive sales conversions by 120%.',
+    problemSolved: 'Marketing agencies struggle to qualify leads.',
+    description: 'This system uses a multi-step quiz funnel to pre-qualify prospects before the sales call.',
     images: [
       'https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F52977%2Ffunnelz-E7hffkng4wGtwHbJKgpDjDND2LFwGq&w=3840&q=100',
       'https://www.framer.com/creators-assets/_next/image/?url=https%3A%2F%2Fy4pdgnepgswqffpt.public.blob.vercel-storage.com%2Ftemplates%2F52977%2Ffunnelz-9ubIqnI9VuKzq0wPGxAl5I7cGNHtcc&w=3840&q=100',
@@ -95,7 +99,7 @@ export default function Work() {
             transition={{ duration: 0.5 }}
             className="text-sm font-medium text-neutral-500"
           >
-            Sample Projects
+            Example Projects
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -104,16 +108,16 @@ export default function Work() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-3 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl"
           >
-            See what we can build for you
+            See the system in action
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mx-auto mt-4 max-w-xl text-neutral-600"
+            className="mx-auto mt-4 max-w-2xl text-neutral-600"
           >
-            Click on a project to view the full gallery
+            These are demo projects that show how we approach lead generation for different industries. Click to explore the full gallery.
           </motion.p>
         </div>
 
@@ -168,10 +172,13 @@ export default function Work() {
               </div>
 
               {/* Project Info */}
-              <div className="mt-4 text-center">
+              <div className="mt-4">
                 <h3 className="text-xl font-semibold text-neutral-900">
                   {project.title}
                 </h3>
+                <p className="mt-2 text-sm font-medium text-red-600">
+                  Problem: {project.problemSolved}
+                </p>
                 <p className="mt-1 text-sm text-neutral-600">
                   {project.description}
                 </p>
@@ -188,7 +195,7 @@ export default function Work() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-12 text-center text-sm text-neutral-500"
         >
-          * Concept demonstrations. Your website will be custom-designed for your needs.
+          * These are concept demonstrations built to show our approach. Your project will be custom-built for your specific business and goals.
         </motion.p>
       </Container>
 

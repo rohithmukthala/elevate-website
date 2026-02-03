@@ -6,40 +6,36 @@ import { Container } from '@/components/ui';
 
 const faqs = [
   {
-    question: 'How long does it take to build a website?',
-    answer: 'Most projects are completed within 2-3 weeks. Simple landing pages can be done in as little as 5-7 days, while more complex websites with custom features may take 4-6 weeks. We\'ll give you a clear timeline before we start.',
+    question: 'What exactly is a "conversion audit"?',
+    answer: 'We review your website to identify where visitors drop off without taking action. You\'ll get a report showing specific issues — like unclear CTAs, missing trust signals, or slow response times — and what to fix.',
   },
   {
-    question: 'What do I need to provide to get started?',
-    answer: 'We\'ll need your brand assets (logo, colors, fonts if you have them), content (text and images), and a clear idea of what you want your website to achieve. Don\'t worry if you don\'t have everything ready – we can guide you through the process.',
+    question: 'How long does the audit take?',
+    answer: 'After our initial call, you\'ll receive your audit report within 48 hours.',
   },
   {
-    question: 'Do you offer ongoing support and maintenance?',
-    answer: 'Yes! We offer monthly maintenance packages that include security updates, backups, performance monitoring, and content updates. We\'re also available for one-time fixes or updates whenever you need them.',
+    question: 'What if my website is brand new?',
+    answer: 'We can still help. We\'ll review your site structure, messaging, and lead capture setup to make sure you\'re not losing potential customers from day one.',
   },
   {
-    question: 'Will my website be mobile-friendly?',
-    answer: 'Absolutely. Every website we build is fully responsive and optimized for all devices – phones, tablets, and desktops. We test extensively to ensure a great experience regardless of screen size.',
+    question: 'Do I need to rebuild my entire website?',
+    answer: 'Not always. Sometimes small changes — like repositioning a form or rewriting a headline — can dramatically improve conversions. We\'ll tell you what\'s actually needed.',
   },
   {
-    question: 'Can you help with SEO and getting found on Google?',
-    answer: 'Yes, we build all our websites with SEO best practices baked in – fast load times, proper structure, meta tags, and more. We also offer additional SEO services to help you rank higher and drive more organic traffic.',
+    question: 'What industries do you work with?',
+    answer: 'We focus on service businesses — gyms, clinics, coaches, real estate agents, tradespeople, and local businesses. If you rely on enquiries to grow, we can help.',
   },
   {
-    question: 'What if I don\'t like the design?',
-    answer: 'We include revision rounds in every project to ensure you\'re completely happy with the result. We start with mockups and get your approval before building, so there are no surprises. If something isn\'t right, we\'ll work with you until it is.',
+    question: 'How much does it cost?',
+    answer: 'The audit is free. If you decide to work with us, we\'ll provide a fixed quote based on what your site needs. No hourly billing, no surprises.',
   },
   {
-    question: 'Will I be able to update the website myself?',
-    answer: 'Absolutely. We build websites with user-friendly content management systems that let you easily update text, images, and content without any technical knowledge. We also provide a walkthrough session to show you exactly how everything works.',
+    question: 'Will I own everything you build?',
+    answer: 'Yes. Once paid, you own all the work — code, copy, and assets. It\'s yours to keep, even if we part ways.',
   },
   {
-    question: 'Do I own the website once it\'s finished?',
-    answer: 'Yes, 100%. Once the project is complete and paid for, you own all the code, design files, and content. It\'s your website – you can host it wherever you want and do whatever you like with it.',
-  },
-  {
-    question: 'Do you offer hosting and domain services?',
-    answer: 'We can help you set up reliable, fast hosting and assist with domain registration or transfer. We recommend specific hosting providers based on your needs and can manage everything for you if you prefer a hands-off approach.',
+    question: 'What if I\'m not happy with the results?',
+    answer: 'We offer revisions until the work matches what we agreed. If we can\'t reach an agreement, we\'ll refund your deposit. See our Founder\'s Guarantee above.',
   },
 ];
 
@@ -72,7 +68,7 @@ export default function FAQ() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="mt-3 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl"
             >
-              Frequently asked questions
+              Common questions about our conversion audit
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -81,7 +77,7 @@ export default function FAQ() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mt-4 text-neutral-600"
             >
-              Everything you need to know about working with us
+              Get answers before you book
             </motion.p>
           </div>
 

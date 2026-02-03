@@ -6,27 +6,27 @@ import { Container } from '@/components/ui';
 const steps = [
   {
     number: '01',
-    title: 'Discovery Call',
+    title: 'Free Conversion Audit',
     description:
-      'We start with a free 15-minute call to understand your business, goals, and what success looks like for your website.',
+      'We review your current website and identify exactly where you\'re losing leads. You\'ll get a clear report — even if you don\'t hire us.',
   },
   {
     number: '02',
-    title: 'Content & Structure',
+    title: 'Strategy & Roadmap',
     description:
-      'Together we map out the pages, sections, and content you need. You provide the details, we organize it for maximum impact.',
+      'We map out the changes needed: messaging, CTAs, lead capture, automation, and tracking. You\'ll know exactly what we\'re building and why.',
   },
   {
     number: '03',
-    title: 'Design + Development',
+    title: 'Build & Test',
     description:
-      'We design your site and build it with clean code. You get regular updates and can request changes along the way.',
+      'We build your conversion system. You\'ll see progress along the way and can request changes before anything goes live.',
   },
   {
     number: '04',
-    title: 'Launch & Support',
+    title: 'Launch & Optimize',
     description:
-      "Once approved, we launch your site and make sure everything runs smoothly. We're here if you need us after launch.",
+      'We launch, monitor results, and make adjustments. The goal isn\'t just a new website — it\'s more enquiries.',
   },
 ];
 
@@ -52,7 +52,7 @@ export default function Process() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-3 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl"
           >
-            From idea to launch in 4 simple steps
+            From audit to live in 4 steps
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -61,8 +61,7 @@ export default function Process() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mx-auto mt-4 max-w-2xl text-lg text-neutral-600"
           >
-            No complicated processes or endless meetings. We keep things simple 
-            so you can focus on running your business.
+            No complicated processes or endless meetings. Here's how we work:
           </motion.p>
         </div>
 

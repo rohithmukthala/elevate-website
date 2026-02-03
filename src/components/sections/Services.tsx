@@ -3,11 +3,12 @@
 import { motion } from 'framer-motion';
 import { Container } from '@/components/ui';
 
-const services = [
+const systemParts = [
   {
-    title: 'Landing Pages',
+    number: '01',
+    title: 'Conversion-Focused Website',
     description:
-      'Single-page websites designed to convert visitors into leads or customers. Perfect for product launches, campaigns, or capturing emails.',
+      'Clear messaging, obvious calls-to-action, and zero confusion about what you do and how to contact you.',
     icon: (
       <svg
         className="h-6 w-6"
@@ -19,16 +20,16 @@ const services = [
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"
+          d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"
         />
       </svg>
     ),
-    features: ['High conversion rates', 'Fast load times', 'Mobile optimized'],
   },
   {
-    title: 'Business Websites',
+    number: '02',
+    title: 'Strategic Lead Capture',
     description:
-      'Professional multi-page websites that establish credibility and help potential customers find and trust your business online.',
+      'Forms, click-to-call buttons, and chat widgets placed where visitors are ready to act — not hidden in a corner.',
     icon: (
       <svg
         className="h-6 w-6"
@@ -40,16 +41,16 @@ const services = [
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3.75h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008zm0 3h.008v.008h-.008v-.008z"
+          d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"
         />
       </svg>
     ),
-    features: ['Build trust & credibility', 'SEO optimized', 'Easy to update'],
   },
   {
-    title: 'E-commerce Websites',
+    number: '03',
+    title: 'Instant Response Automation',
     description:
-      'Online stores that make it easy for customers to browse, buy, and come back. Built to handle products, payments, and growth.',
+      'Automatic email and SMS confirmations so leads know you received their enquiry within seconds.',
     icon: (
       <svg
         className="h-6 w-6"
@@ -61,16 +62,16 @@ const services = [
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+          d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
         />
       </svg>
     ),
-    features: ['Secure checkout', 'Inventory management', 'Sales analytics'],
   },
   {
-    title: 'Website Redesigns',
+    number: '04',
+    title: 'Follow-Up Sequences',
     description:
-      'Transform your outdated website into a modern, fast, and effective online presence that reflects where your business is today.',
+      'Automated reminders that keep your business top-of-mind until the lead is ready to buy.',
     icon: (
       <svg
         className="h-6 w-6"
@@ -82,11 +83,31 @@ const services = [
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
-          d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99"
+          d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3"
         />
       </svg>
     ),
-    features: ['Modern design', 'Improved performance', 'Better conversions'],
+  },
+  {
+    number: '05',
+    title: 'Tracking & Insights',
+    description:
+      'Know exactly where your leads come from, which pages convert, and where visitors drop off.',
+    icon: (
+      <svg
+        className="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={1.5}
+        stroke="currentColor"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"
+        />
+      </svg>
+    ),
   },
 ];
 
@@ -114,10 +135,10 @@ const cardVariants = {
 
 export default function Services() {
   return (
-    <section id="services" className="bg-neutral-50 py-20 sm:py-28 lg:py-32">
+    <section id="services" className="bg-white py-20 sm:py-28 lg:py-32">
       <Container>
         {/* Section Header */}
-        <div className="max-w-2xl">
+        <div className="mx-auto max-w-3xl text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -125,7 +146,7 @@ export default function Services() {
             transition={{ duration: 0.5 }}
             className="text-sm font-medium text-neutral-500"
           >
-            What We Do
+            The Solution
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -134,7 +155,7 @@ export default function Services() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-3 text-3xl font-bold tracking-tight text-neutral-900 sm:text-4xl"
           >
-            Websites that work as hard as you do
+            A complete system that turns your website into a lead generation machine
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -143,89 +164,60 @@ export default function Services() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-4 text-lg text-neutral-600"
           >
-            Every business is different. We build custom solutions tailored to your 
-            goals — whether you need to capture leads, sell products, or simply 
-            look professional online.
+            We don't just build websites. We build conversion systems with five connected parts:
           </motion.p>
         </div>
 
-        {/* Services Grid */}
+        {/* System Parts */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
-          className="mt-12 grid gap-6 sm:mt-16 sm:grid-cols-2 lg:gap-8"
+          className="mt-12 sm:mt-16"
         >
-          {services.map((service) => (
-            <motion.div
-              key={service.title}
-              variants={cardVariants}
-              whileHover={{ y: -4 }}
-              className="group relative rounded-2xl bg-white p-6 shadow-sm ring-1 ring-neutral-100 transition-shadow hover:shadow-md sm:p-8"
-            >
-              {/* Icon */}
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-neutral-900 text-white">
-                {service.icon}
-              </div>
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+            {systemParts.map((part) => (
+              <motion.div
+                key={part.number}
+                variants={cardVariants}
+                className="relative rounded-2xl border border-neutral-200 bg-neutral-50 p-6 sm:p-8"
+              >
+                {/* Number Badge */}
+                <div className="absolute -top-3 left-6 rounded-full bg-neutral-900 px-3 py-1 text-xs font-bold text-white">
+                  {part.number}
+                </div>
 
-              {/* Content */}
-              <h3 className="mt-5 text-xl font-semibold text-neutral-900">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-neutral-600 leading-relaxed">
-                {service.description}
-              </p>
+                {/* Icon */}
+                <div className="mt-2 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-white text-neutral-900 shadow-sm">
+                  {part.icon}
+                </div>
 
-              {/* Features */}
-              <ul className="mt-4 flex flex-wrap gap-2">
-                {service.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className="rounded-full bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-600"
-                  >
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Hover Arrow */}
-              <div className="absolute right-6 top-6 opacity-0 transition-opacity group-hover:opacity-100 sm:right-8 sm:top-8">
-                <svg
-                  className="h-5 w-5 text-neutral-400"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={2}
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
-                  />
-                </svg>
-              </div>
-            </motion.div>
-          ))}
+                {/* Content */}
+                <h3 className="mt-5 text-lg font-semibold text-neutral-900">
+                  {part.title}
+                </h3>
+                <p className="mt-2 text-neutral-600 leading-relaxed">
+                  {part.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
 
-        {/* Bottom CTA */}
+        {/* Bottom Line */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 text-center sm:mt-16"
+          className="mt-12 sm:mt-16"
         >
-          <p className="text-neutral-600">
-            Not sure what you need?{' '}
-            <a
-              href="#contact"
-              className="font-medium text-neutral-900 underline underline-offset-4 hover:no-underline"
-            >
-              Let&apos;s talk about your project
-            </a>
-          </p>
+          <div className="mx-auto max-w-2xl rounded-2xl bg-neutral-900 p-6 text-center sm:p-8">
+            <p className="text-lg font-medium text-white">
+              Every part works together. Miss one, and leads slip away.
+            </p>
+          </div>
         </motion.div>
       </Container>
     </section>

@@ -2,7 +2,24 @@
 
 import { motion } from 'framer-motion';
 import { Container, useBooking } from '@/components/ui';
-import { siteConfig } from '@/lib/constants';
+
+const steps = [
+  {
+    number: '1',
+    title: 'Quick call (15 min)',
+    description: "We'll ask about your business, your current website, and where your leads come from.",
+  },
+  {
+    number: '2',
+    title: 'We audit your site',
+    description: "Within 48 hours, you'll receive a report showing exactly where visitors drop off and what's costing you enquiries.",
+  },
+  {
+    number: '3',
+    title: 'You decide',
+    description: "No pressure. If our approach makes sense for you, we'll talk next steps. If not, you keep the audit.",
+  },
+];
 
 export default function CTA() {
   const { openBookingModal } = useBooking();
@@ -39,20 +56,18 @@ export default function CTA() {
       </div>
 
       <Container>
-        <div className="relative mx-auto max-w-3xl text-center">
+        <div className="relative mx-auto max-w-3xl">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 rounded-full border border-neutral-700 bg-neutral-800/50 px-4 py-2"
+            className="text-center"
           >
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-neutral-700 bg-neutral-800/50 px-4 py-2 text-sm text-neutral-300">
+              Ready to get more leads?
             </span>
-            <span className="text-sm text-neutral-300">Currently accepting new projects</span>
           </motion.div>
 
           {/* Heading */}
@@ -61,29 +76,57 @@ export default function CTA() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-8 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
+            className="mt-8 text-center text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl"
           >
-            Ready to grow your business with a website that actually works?
+            Get your free website conversion audit
           </motion.h2>
 
-          {/* Description */}
+          {/* What happens section */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 text-lg text-neutral-400"
+            className="mt-8 text-center text-lg text-neutral-400"
           >
-            Book a free 15-minute call to discuss your project. No pressure, no commitment – just a friendly chat about how we can help you achieve your goals.
+            Here's what happens when you book:
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* Steps */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
+            className="mt-8 space-y-4"
+          >
+            {steps.map((step, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
+                className="flex gap-4 rounded-xl bg-neutral-800/50 p-4"
+              >
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-sm font-bold text-neutral-900">
+                  {step.number}
+                </div>
+                <div>
+                  <p className="font-semibold text-white">{step.title}</p>
+                  <p className="mt-1 text-sm text-neutral-400">{step.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
+
+          {/* CTA Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="mt-10 text-center"
           >
             <motion.button
               onClick={openBookingModal}
@@ -91,7 +134,7 @@ export default function CTA() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Book Your Free Call
+              Book Your Free Audit
               <motion.svg
                 className="ml-2 h-4 w-4"
                 fill="none"
@@ -107,44 +150,9 @@ export default function CTA() {
               </motion.svg>
             </motion.button>
 
-            <motion.a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=webagencyelevate@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-full border border-neutral-700 bg-transparent px-8 py-4 text-base font-medium text-white transition-all hover:border-neutral-600 hover:bg-neutral-800"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Or Email Us
-            </motion.a>
-          </motion.div>
-
-          {/* Trust indicators */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-            className="mt-12 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm text-neutral-500"
-          >
-            <div className="flex items-center gap-2">
-              <svg className="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <span>No upfront payment</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <span>Response within 24 hours</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <svg className="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-              </svg>
-              <span>100% satisfaction guarantee</span>
-            </div>
+            <p className="mt-4 text-sm text-neutral-500">
+              No payment required. No commitment. Just clarity.
+            </p>
           </motion.div>
         </div>
       </Container>

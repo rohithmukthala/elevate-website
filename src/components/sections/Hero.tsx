@@ -23,7 +23,7 @@ export default function Hero() {
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
             />
             <p className="text-sm font-medium text-neutral-500 sm:text-base">
-              Available for new projects
+              Now auditing websites for Q1
             </p>
           </motion.div>
 
@@ -34,9 +34,9 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="mt-6 text-4xl font-bold leading-tight tracking-tight text-neutral-900 sm:text-5xl sm:leading-tight lg:text-6xl lg:leading-tight"
           >
-            We build websites that{' '}
+            Your website gets visitors. We turn them into{' '}
             <span className="relative inline-block">
-              <span className="relative z-10">turn visitors into customers.</span>
+              <span className="relative z-10">enquiries.</span>
               <motion.span
                 className="absolute bottom-2 left-0 -z-0 h-3 w-full bg-neutral-900/10 sm:bottom-3 sm:h-4 lg:bottom-4 lg:h-5"
                 initial={{ scaleX: 0 }}
@@ -54,9 +54,9 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 text-lg leading-relaxed text-neutral-600 sm:text-xl sm:leading-relaxed"
           >
-            From landing pages to full e-commerce stores, we design and develop 
-            websites that look great, load fast, and help your business grow. 
-            No templates. No fluff. Just results.
+            Most business websites look fine but fail to generate leads. We fix that. 
+            Our conversion systems turn your existing traffic into phone calls, 
+            form submissions, and booked appointments.
           </motion.p>
 
           {/* CTAs */}
@@ -73,7 +73,7 @@ export default function Hero() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Book a Free Call
+              Get a Free Conversion Audit
               <motion.svg
                 className="ml-2 h-4 w-4"
                 fill="none"
@@ -93,57 +93,38 @@ export default function Hero() {
 
             {/* Secondary CTA */}
             <motion.a
-              href="#work"
+              href="#process"
               className="inline-flex items-center justify-center rounded-full border-2 border-neutral-200 bg-white px-7 py-4 text-base font-medium text-neutral-900 transition-colors hover:border-neutral-300 hover:bg-neutral-50"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              See Our Work
+              See How It Works
             </motion.a>
           </motion.div>
 
-          {/* Stats / Social Proof */}
+          {/* Trust Element */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-12 flex flex-wrap items-center gap-8 border-t border-neutral-100 pt-8"
+            className="mt-12 flex items-center gap-3 border-t border-neutral-100 pt-8"
           >
-            <div>
-              <motion.p 
-                className="text-3xl font-bold text-neutral-900"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.7 }}
-              >
-                50+
-              </motion.p>
-              <p className="text-sm text-neutral-500">Projects Delivered</p>
-            </div>
-            <div className="h-10 w-px bg-neutral-200" />
-            <div>
-              <motion.p 
-                className="text-3xl font-bold text-neutral-900"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.8 }}
-              >
-                98%
-              </motion.p>
-              <p className="text-sm text-neutral-500">Client Satisfaction</p>
-            </div>
-            <div className="hidden h-10 w-px bg-neutral-200 sm:block" />
-            <div className="hidden sm:block">
-              <motion.p 
-                className="text-3xl font-bold text-neutral-900"
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4, delay: 0.9 }}
-              >
-                2 weeks
-              </motion.p>
-              <p className="text-sm text-neutral-500">Average Delivery</p>
-            </div>
+            <svg
+              className="h-5 w-5 text-green-600 shrink-0"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <p className="text-neutral-600">
+              We audit before we build — if your site isn't losing leads, we'll tell you
+            </p>
           </motion.div>
         </div>
       </Container>

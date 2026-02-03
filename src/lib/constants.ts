@@ -2,7 +2,7 @@
 
 export const siteConfig = {
   name: 'Elevate',
-  description: 'We design and build websites that help your business grow.',
+  description: 'We turn your website visitors into leads, enquiries, and booked appointments.',
   url: 'https://elevate.agency',
   contact: {
     email: 'webagencyelevate@gmail.com',
@@ -18,8 +18,9 @@ export const siteConfig = {
 };
 
 export const navLinks = [
-  { label: 'Services', href: '#services' },
-  { label: 'Process', href: '#process' },
-  { label: 'Work', href: '#work' },
+  { label: 'The Problem', href: '#problem' },
+  { label: 'Our Solution', href: '#services' },
+  { label: 'How It Works', href: '#process' },
+  { label: 'Examples', href: '#work' },
   { label: 'FAQ', href: '#faq' },
 ];

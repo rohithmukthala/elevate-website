@@ -81,7 +81,7 @@ export default function Navbar() {
             className="rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-neutral-800"
             style={{ backgroundColor: '#171717', color: '#ffffff' }}
           >
-            Book a Call
+            Free Audit
           </button>
 
           {/* Mobile Menu Button */}
